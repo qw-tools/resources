@@ -1,4 +1,5 @@
 # QuakeWorld Resources
+[![Deploy](https://github.com/quakeworldnu/resources.quakeworld.nu/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/quakeworldnu/resources.quakeworld.nu/actions/workflows/deploy.yml)
 
 ## Commands
 
