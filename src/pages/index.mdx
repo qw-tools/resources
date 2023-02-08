@@ -1,0 +1,16 @@
+---
+layout: ../layouts/Page.astro
+title: QuakeWorld Resources
+---
+
+import resources from "./../data/resources.json";
+
+export const published = new Date('2022-02-01'); // available in mdx
+
+<div className="text-lg">foo bar baz</div>
+
+---
+
+<ul>
+  {resources.map(r => <li><a href={r.url}>{r.title}</a></li>)}
+</ul>

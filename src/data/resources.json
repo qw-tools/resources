@@ -1,0 +1,27 @@
+[
+  {
+    "category": "community",
+    "title": "QuakeWorld.nu",
+    "url": "https://www.quakeworld.nu/"
+  },
+  {
+    "category": "community",
+    "title": "QuakeWorld Wiki",
+    "url": "https://www.quakeworld.nu/wiki/"
+  },
+  {
+    "category": "community",
+    "title": "Quake.World Discord",
+    "url": "https://gfx.quakeworld.nu/"
+  },
+  {
+    "category": "Graphics",
+    "title": "QuakeWorld GFX",
+    "url": "https://gfx.quakeworld.nu/"
+  },
+  {
+    "category": "Servers",
+    "title": "Ciscons server list",
+    "url": "https://nicotinelounge.com/servers.txt"
+  }
+]
