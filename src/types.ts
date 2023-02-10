@@ -5,9 +5,11 @@ export type Category = {
 export type Item = {
   title: string;
   slogan?: string;
-  url: string | string[];
+  description?: string;
+  url: string;
+  related?: string[];
   category: Category;
-  tags: string[];
+  tags?: string[];
 }
 
 export type ItemCollection = {
