@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Item } from "../types";
-import { defineProps } from "vue";
 
 import { getIconUrlByUrl, getLogoUrlByTitle, hasPublicFile } from "../util";
 
