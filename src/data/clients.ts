@@ -19,4 +19,12 @@ export const clients: Item[] = [
     title: "FTE",
     url: ["https://fte.triptohell.info/", "https://sourceforge.net/projects/fteqw/"],
   },
+  {
+    title: "bootable quake",
+    url: "https://github.com/ciscon/quake-bootable/",
+  },
+  {
+    title: "nQuake",
+    url: "https://nquake.com/",
+  },
 ].map(toItem);

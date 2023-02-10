@@ -2,7 +2,7 @@ import { categories } from "./categories.js";
 
 export const discords = [
   {
-    title: "Quake.World",
+    title: "Quake.World Discord",
     url: "https://discord.quake.world/",
   }
 ].map(d => ({
@@ -23,6 +23,10 @@ const websites = [
   {
     title: "QuakeWorld GFX",
     url: "https://gfx.quakeworld.nu/",
+  },
+  {
+    title: "QuakeWorld Hub",
+    url: "https://hub.quakeworld.nu/",
   },
 ].map(w => ({
   ...w,
