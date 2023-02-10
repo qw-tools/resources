@@ -14,7 +14,6 @@ function itemToKeywordString(item: Item): string {
 }
 
 function onQueryChange(query: string): void {
-  console.log("query", query);
   const filteredItems = items.filter(i => itemToKeywordString(i).includes(query.toLowerCase()));
   collections = toItemCollections(filteredItems);
 }
