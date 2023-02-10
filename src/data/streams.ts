@@ -19,7 +19,7 @@ function toItem(value: [string, string]): Item {
 export const streams: Item[] = Object.entries({
   QuakeWorld: "quakeworld",
   ake_vader: "ake_vader",
-  andeh: "suddendeathTV https://www.youtube.com/@TVsuddendeath",
+  suddendeathTV: "suddendeathTV https://www.youtube.com/@TVsuddendeath",
   anni: "annihilazor",
   badsebitv1: "badsebitv https://www.youtube.com/@badsebitv",
   "BLooD_DoG(D_P)": "maalox1",
@@ -45,5 +45,5 @@ export const streams: Item[] = Object.entries({
   velocity: "chadmcdouche",
   Wimp: "wimpeeh",
   XantoM: "vikpe",
-  Zora: "zorakwar",
+  Zorak: "zorakwar",
 }).map(toItem);
