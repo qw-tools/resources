@@ -7,6 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "format": "npx prettier --write \"src/**/*.ts\"",
     "astro": "astro"
   },
   "dependencies": {
