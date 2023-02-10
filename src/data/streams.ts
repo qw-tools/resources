@@ -3,16 +3,14 @@ import { categories } from "./categories.js";
 
 function toItem(value: [string, string]): Item {
   const urls = value[1].split(" ");
-
-  const twitchUrl = `https://www.twitch.tv/${urls[0]}`;
-  const youtubeUrl = urls[1];
+  const hasYoutube = urls.length > 1;
 
   return {
     title: value[0],
-    url: twitchUrl,
-    related: youtubeUrl ? [youtubeUrl] : [],
+    url: `https://www.twitch.tv/${urls[0]}`,
+    related: hasYoutube ? [urls[1]] : [],
     category: categories.streams,
-    tags: ["twitch"],
+    tags: hasYoutube ? ["twitch", "youtube"] : ["twitch"],
   };
 }
 
