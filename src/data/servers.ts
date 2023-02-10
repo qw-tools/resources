@@ -14,12 +14,18 @@ export const servers: Item[] = [
   },
   {
     title: "QuakeWorld Server Overview",
-    url: ["https://vikpe.org/qw-server-overview/", "https://github.com/vikpe/qw-server-overview"],
+    url: "https://vikpe.org/qw-server-overview/",
+    related: ["https://github.com/vikpe/qw-server-overview"],
     tags: ["xantom"]
   },
   {
     title: "QuakeServers.net",
     url: ["https://www.quakeservers.net/"],
-    tags: []
+  },
+  {
+    title: "serverstat",
+    description: "Get info from QuakeWorld servers.",
+    url: "https://github.com/vikpe/serverstat",
+    tags: ["xantom"]
   },
 ].map(toItem);

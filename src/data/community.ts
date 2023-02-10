@@ -1,4 +1,5 @@
 import { categories } from "./categories.js";
+import type { Item } from "../types";
 
 export const discords = [
   {
@@ -11,7 +12,7 @@ export const discords = [
   tags: ["discord"],
 }));
 
-const websites = [
+const websites: Partial<Item>[] = [
   {
     title: "QuakeWorld.nu",
     url: "https://www.quakeworld.nu/",
@@ -27,6 +28,7 @@ const websites = [
   {
     title: "QuakeWorld Hub",
     url: "https://hub.quakeworld.nu/",
+    related: ["https://github.com/quakeworldnu/hub.quakeworld.nu"]
   },
 ].map(w => ({
   ...w,

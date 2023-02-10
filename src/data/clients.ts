@@ -1,10 +1,11 @@
 import type { Item } from "../types";
 import { categories } from "./categories.js";
 
-function toItem(client: Pick<Item, "title" | "url">): Item {
+function toItem(client: Pick<Item, "title" | "url" | "related">): Item {
   return {
     title: client.title,
     url: client.url,
+    related: client.related ?? [],
     category: categories.clients,
     tags: []
   }
@@ -13,11 +14,13 @@ function toItem(client: Pick<Item, "title" | "url">): Item {
 export const clients: Item[] = [
   {
     title: "ezQuake",
-    url: ["https://ezquake.com/", "https://github.com/QW-Group/ezquake-source"],
+    url: "https://ezquake.com/",
+    related: ["https://github.com/QW-Group/ezquake-source"]
   },
   {
     title: "FTE",
-    url: ["https://fte.triptohell.info/", "https://sourceforge.net/projects/fteqw/"],
+    url: "https://www.fteqw.org/",
+    related: ["https://github.com/fte-team/fteqw"]
   },
   {
     title: "bootable quake",
@@ -26,5 +29,6 @@ export const clients: Item[] = [
   {
     title: "nQuake",
     url: "https://nquake.com/",
+    related: ["https://github.com/nQuake"]
   },
 ].map(toItem);
