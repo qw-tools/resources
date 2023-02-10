@@ -1,4 +1,60 @@
 import { Item, ItemCollection } from "./types";
+import fs from 'node:fs';
+
+export function slugify(text: string): string {
+  return text
+    .toString() // Cast to string (optional)
+    .normalize("NFKD") // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
+    .toLowerCase() // Convert the string to lowercase letters
+    .trim() // Remove whitespace from both sides of a string (optional)
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/_/g, "-") // Replace _ with -
+    .replace(/--+/g, "-") // Replace multiple - with single -
+    .replace(/-$/g, ""); // Remove trailing -
+}
+
+export function getIconNameByUrl(url: string): string {
+  if (url.includes(".txt")) {
+    return "file_text";
+
+  }
+
+  const services = {
+    "https://github.com/": "github",
+    "https://www.twitch.tv/": "twitch",
+    "https://www.youtube.com/": "youtube",
+    "discord": "discord",
+    "https://sourceforge.net/": "sourceforge",
+  }
+
+  for (const [sUrl, sName] of Object.entries(services)) {
+    if (url.includes(sUrl)) {
+      return sName;
+    }
+  }
+
+  return "website";
+}
+
+export function getIconUrlByUrl(url: string): string {
+  return `/assets/img/icons/${getIconNameByUrl(url)}.svg`;
+}
+
+export function getLogoUrlByTitle(title: string): string {
+  return `/assets/img/logotypes/${slugify(title)}.png`
+}
+
+export function hasPublicFile(path: string): boolean {
+  const absPath = `public/${path}`;
+
+  try {
+    fs.statSync(absPath);
+    return true;
+  } catch {
+    return false
+  }
+}
 
 function toSortString(item: Item): string {
   return `${item.category.title} ${item.title}`.toLowerCase();
