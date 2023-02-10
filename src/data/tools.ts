@@ -9,5 +9,5 @@ export const tools: Item[] = [
     related: ["https://github.com/TrenchBroom/TrenchBroom"],
     category: categories.tools,
     tags: ["maps", "editors"],
-  }
+  },
 ];

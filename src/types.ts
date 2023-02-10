@@ -1,6 +1,6 @@
 export type Category = {
   title: string;
-}
+};
 
 export type Item = {
   title: string;
@@ -10,9 +10,9 @@ export type Item = {
   related?: string[];
   category: Category;
   tags?: string[];
-}
+};
 
 export type ItemCollection = {
   category: Category;
   items: Item[];
-}
+};

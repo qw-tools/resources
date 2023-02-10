@@ -1,26 +1,34 @@
 import type { Item } from "../types";
 import { categories } from "./categories.js";
 
-function toItem(client: Pick<Item, "title" | "url" | "related">): Item {
-  return {
-    title: client.title,
-    url: client.url,
-    related: client.related ?? [],
+function toItem(client: Partial<Item>): Item {
+  const defaultItem: Item = {
+    title: "",
+    slogan: "",
+    description: "",
+    url: "",
+    related: [],
     category: categories.clients,
-    tags: []
-  }
+    tags: [],
+  };
+
+  return {
+    ...defaultItem,
+    ...client,
+  };
 }
 
 export const clients: Item[] = [
   {
     title: "ezQuake",
+    slogan: "Modern QuakeWorld Client",
     url: "https://ezquake.com/",
-    related: ["https://github.com/QW-Group/ezquake-source"]
+    related: ["https://github.com/QW-Group/ezquake-source"],
   },
   {
     title: "FTE",
     url: "https://www.fteqw.org/",
-    related: ["https://github.com/fte-team/fteqw"]
+    related: ["https://github.com/fte-team/fteqw"],
   },
   {
     title: "bootable quake",
@@ -29,6 +37,6 @@ export const clients: Item[] = [
   {
     title: "nQuake",
     url: "https://nquake.com/",
-    related: ["https://github.com/nQuake"]
+    related: ["https://github.com/nQuake"],
   },
 ].map(toItem);

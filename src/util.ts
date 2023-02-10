@@ -1,5 +1,5 @@
 import { Item, ItemCollection } from "./types";
-import fs from 'node:fs';
+import fs from "node:fs";
 
 export function slugify(text: string): string {
   return text
@@ -17,16 +17,15 @@ export function slugify(text: string): string {
 export function getIconNameByUrl(url: string): string {
   if (url.includes(".txt")) {
     return "file_text";
-
   }
 
   const services = {
     "https://github.com/": "github",
     "https://www.twitch.tv/": "twitch",
     "https://www.youtube.com/": "youtube",
-    "discord": "discord",
+    discord: "discord",
     "https://sourceforge.net/": "sourceforge",
-  }
+  };
 
   for (const [sUrl, sName] of Object.entries(services)) {
     if (url.includes(sUrl)) {
@@ -42,7 +41,7 @@ export function getIconUrlByUrl(url: string): string {
 }
 
 export function getLogoUrlByTitle(title: string): string {
-  return `/assets/img/logotypes/${slugify(title)}.png`
+  return `/assets/img/logotypes/${slugify(title)}.png`;
 }
 
 export function hasPublicFile(path: string): boolean {
@@ -52,7 +51,7 @@ export function hasPublicFile(path: string): boolean {
     fs.statSync(absPath);
     return true;
   } catch {
-    return false
+    return false;
   }
 }
 
