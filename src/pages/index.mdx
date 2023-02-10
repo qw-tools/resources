@@ -3,31 +3,6 @@ layout: ../layouts/Page.astro
 title: QuakeWorld Resources
 ---
 
-import { resources } from "./../data/resources.js";
-import ItemLink from "../components/ItemLink.vue";
-import { toItemCollections } from "../util";
+import Resources from "../components/Resources.vue";
 
-export const collections = toItemCollections(resources);
-
-<div className="space-y-6">
-  <div className="font-bold text-lg">Collection of QuakeWorld related resources.</div>
-
-{" "}
-<input type="text" className="p-2 dark:bg-white/10" placeholder="filter" />
-
-{
-collections.map(c => (
-<div>
-<div className="font-bold text-2xl py-2 pl-4 border-l-4 border-l-purple-400 bg-purple-400/10 flex">{c.category.title} ({c.items.length})</div>
-<div className="py-2">
-{
-c.items.map(item => (
-<ItemLink item={item} />
-))
-}
-</div>
-</div>
-))
-}
-
-</div>
+<Resources client:load />
