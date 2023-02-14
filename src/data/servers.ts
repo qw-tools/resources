@@ -1,4 +1,4 @@
-import type { Item } from "../types";
+import type { Item } from "@/types";
 import { categories } from "./categories";
 
 const toItem = (w) => ({
@@ -14,6 +14,8 @@ export const servers: Item[] = [
   },
   {
     title: "QuakeWorld Server Overview",
+    logo: "vikpe.png",
+    slogan: "Server info, geo location and statistics.",
     url: "https://vikpe.org/qw-server-overview/",
     related: ["https://github.com/vikpe/qw-server-overview"],
     tags: ["xantom"],
@@ -23,8 +25,16 @@ export const servers: Item[] = [
     url: "https://www.quakeservers.net/",
   },
   {
+    title: "masterstat",
+    logo: "vikpe.png",
+    slogan: "Get info from QuakeWorld master servers.",
+    url: "https://github.com/vikpe/masterstat",
+    tags: ["xantom"],
+  },
+  {
     title: "serverstat",
-    description: "Get info from QuakeWorld servers.",
+    logo: "vikpe.png",
+    slogan: "Get info from QuakeWorld servers.",
     url: "https://github.com/vikpe/serverstat",
     tags: ["xantom"],
   },

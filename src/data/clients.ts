@@ -1,4 +1,4 @@
-import type { Item } from "../types";
+import type { Item } from "@/types";
 import { categories } from "./categories.js";
 
 function toItem(client: Partial<Item>): Item {
@@ -21,12 +21,14 @@ function toItem(client: Partial<Item>): Item {
 export const clients: Item[] = [
   {
     title: "ezQuake",
+    logo: "ezquake.png",
     slogan: "Modern QuakeWorld Client",
     url: "https://ezquake.com/",
     related: ["https://github.com/QW-Group/ezquake-source"],
   },
   {
     title: "FTE",
+    logo: "fte.png",
     url: "https://www.fteqw.org/",
     related: ["https://github.com/fte-team/fteqw"],
   },
@@ -36,6 +38,8 @@ export const clients: Item[] = [
   },
   {
     title: "nQuake",
+    slogan: "QuakeWorld client and server packages.",
+    logo: "nquake.png",
     url: "https://nquake.com/",
     related: ["https://github.com/nQuake"],
   },

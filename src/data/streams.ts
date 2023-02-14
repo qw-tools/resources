@@ -1,4 +1,4 @@
-import type { Item } from "../types";
+import type { Item } from "@/types";
 import { categories } from "./categories.js";
 
 function toItem(value: [string, string]): Item {
