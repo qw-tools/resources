@@ -18,6 +18,10 @@ function onQueryChange(query: string): void {
   collections = toItemCollections(filteredItems);
 }
 
+function onClearQuery(): void {
+  query.value = "";
+}
+
 watch(query, onQueryChange, { immediate: true });
 
 </script>
@@ -40,6 +44,10 @@ watch(query, onQueryChange, { immediate: true });
       <div class="py-2 divide-y divide-white/10 md:divide-y-0 md:grid md:gap-x-14 md:grid-cols-2 xl:grid-cols-4">
         <ItemLink v-for="i in c.items" :key="i.title" :item="i" />
       </div>
+    </div>
+
+    <div v-if="0 === collections.length" class="space-x-4">
+      <span>nothing found :(</span> <button class="bg-gray-700 rounded shadow text-sm font-mono px-2 py-1" @click="onClearQuery">reset filter</button>
     </div>
 
   </div>
