@@ -1,53 +1,46 @@
 <script setup lang="ts">
-import type { Item } from "../types";
+import type { Item } from "@/types";
 
-import { getIconUrlByUrl, getLogoUrlByTitle, hasPublicFile } from "../util";
+import { getIconUrlByUrl, getLogoUrl } from "@/util";
 
 interface Props {
   item: Item;
 }
 
 const props = defineProps<Props>();
-const { title, url, description = "", slogan = "", related = [] } = props.item;
+const { title, url, description = "", slogan = "", logo = "", related = [] } = props.item;
 
-const logoUrl = getLogoUrlByTitle(title);
-const hasVendorLogo = hasPublicFile(logoUrl);
-const imgUrl = hasVendorLogo ? logoUrl : getIconUrlByUrl(url);
-const imgSize = hasVendorLogo ? 24 : 24;
+const imgUrl = logo ? getLogoUrl(logo) : getIconUrlByUrl(url);
+const imgSize = 24;
 </script>
 
 <template>
   <div>
-    <div class="p-2 border border-white/10">
-      <a :href="url">
-        <img :src="imgUrl" :width="imgSize" class="inline m-0 mr-2" />
+    <div class="flex items-center">
+      <a :href="url" class="px-2 py-3 hover:bg-white/10 grow">
+        <img :src="imgUrl" :width="imgSize" class="inline m-0 mr-2" :alt={title} />
         <span class="font-bold">{{ title }}</span>
-        <span v-if="slogan" class="text-white/50 underline-0">
-          - {{ slogan }}</span
-        >
-        <span v-if="description && !slogan" class="text-white/50 text-sm">
-          - {{ description }}</span
-        >
+        <div v-if="slogan" class="text-white/70 text-sm mt-1">{{ slogan }}</div>
       </a>
 
-      <span v-if="related.length" class="ml-8 space-x-4">
+      <div v-if="related.length" class="ml-auto px-1 flex items-center">
         <a
-          v-for="related_url in related"
-          :href="related_url"
-          class="grayscale hover:grayscale-0"
+            v-for="related_url in related"
+            :href="related_url"
+            class="bg-white/5 p-2 rounded-full grayscale hover:grayscale-0 border border-white/5 hover:bg-blue-400/20 hover:border-blue-400/10 ml-2"
         >
           <img
-            :src="getIconUrlByUrl(related_url)"
-            width="16"
-            height="16"
-            class="inline m-0"
+              :src="getIconUrlByUrl(related_url)"
+              width="16"
+              height="16"
+              alt=""
+              style="min-width: 16px; min-height: 16px"
           />
         </a>
-      </span>
-
-      <div v-if="slogan && description" class="text-sm text-white/50 py-2">
-        {{ description }}
       </div>
+    </div>
+    <div v-if="description" class="text-white/50 text-sm px-2 pb-3 -mt-1">
+      {{ description }}
     </div>
   </div>
 </template>
