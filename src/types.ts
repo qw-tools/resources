@@ -6,6 +6,7 @@ export type Item = {
   title: string;
   slogan?: string;
   description?: string;
+  logo?: string;
   url: string;
   related?: string[];
   category: Category;
