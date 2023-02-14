@@ -16,8 +16,8 @@ const imgSize = 24;
 
 <template>
   <div>
-    <div class="flex items-center">
-      <a :href="url" class="px-2 py-3 hover:bg-white/10 grow">
+    <div class="flex items-center ">
+      <a :href="url" class="px-2 py-3 hover:bg-white/10 grow transition-colors">
         <img :src="imgUrl" :width="imgSize" class="inline m-0 mr-2" :alt={title} />
         <span class="font-bold">{{ title }}</span>
         <div v-if="slogan" class="text-white/70 text-sm mt-1">{{ slogan }}</div>
@@ -27,7 +27,7 @@ const imgSize = 24;
         <a
             v-for="related_url in related"
             :href="related_url"
-            class="bg-white/5 p-2 rounded-full grayscale hover:grayscale-0 border border-white/5 hover:bg-blue-400/20 hover:border-blue-400/10 ml-2"
+            class="bg-white/5 p-2 rounded-full grayscale hover:grayscale-0 border border-white/5 hover:bg-blue-400/20 hover:border-blue-400/10 ml-2 transition-colors"
         >
           <img
               :src="getIconUrlByUrl(related_url)"
