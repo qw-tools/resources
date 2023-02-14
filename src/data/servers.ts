@@ -22,6 +22,7 @@ export const servers: Item[] = [
   },
   {
     title: "QuakeServers.net",
+    slogan: "Listing active servers for Quake games series.",
     url: "https://www.quakeservers.net/",
   },
   {

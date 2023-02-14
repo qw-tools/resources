@@ -34,7 +34,9 @@ export const clients: Item[] = [
   },
   {
     title: "bootable quake",
+    slogan: "Highly optimized unix image with ezQuake.",
     url: "https://github.com/ciscon/quake-bootable/",
+    tags: ["ciscon"],
   },
   {
     title: "nQuake",
