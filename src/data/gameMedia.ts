@@ -9,9 +9,20 @@ export const gameMedia: Item[] = [
     url: "https://gfx.quakeworld.nu/",
   },
   {
-    title: "maps.quakeworld.nu",
-    slogan: "QuakeWorld map archive.",
+    title: "QuakeWorld Map Archive",
     url: "https://maps.quakeworld.nu/",
+  },
+  {
+    title: "HUD numbers generator",
+    url: "https://vikpe.org/qwnum/",
+    related: ["https://github.com/vikpe/qwnum"],
+    tags: ["xantom", "editor", "tool"]
+  },
+  {
+    title: "Model Texture Editor",
+    url: "https://vikpe.org/qw-gfx/",
+    related: ["https://github.com/vikpe/qw-gfx"],
+    tags: ["xantom", "editor", "tool"]
   },
   {
     title: "TrenchBroom",

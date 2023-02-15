@@ -19,7 +19,6 @@ export const serverInfo: Item[] = [
   },
   {
     title: "QuakeWorld Server Overview",
-    logo: "vikpe.png",
     slogan: "Server info, geo location and statistics.",
     url: "https://vikpe.org/qw-server-overview/",
     related: ["https://github.com/vikpe/qw-server-overview"],
