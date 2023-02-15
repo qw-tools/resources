@@ -3,14 +3,19 @@ import { categories } from "./categories";
 
 const toItem = (w) => ({
   ...w,
-  category: categories.servers,
+  category: categories.serverInfo,
 });
 
-export const servers: Item[] = [
+export const serverInfo: Item[] = [
   {
     title: "Ciscons server list",
     url: "https://nicotinelounge.com/servers.txt",
     tags: ["ciscon"],
+  },
+  {
+    title: "Ciscons anti-lag server list",
+    url: "https://nicotinelounge.com/servers-antilag.txt",
+    tags: ["ciscon", "antilag"],
   },
   {
     title: "QuakeWorld Server Overview",
@@ -27,14 +32,12 @@ export const servers: Item[] = [
   },
   {
     title: "masterstat",
-    logo: "vikpe.png",
     slogan: "Get info from QuakeWorld master servers.",
     url: "https://github.com/vikpe/masterstat",
     tags: ["xantom"],
   },
   {
     title: "serverstat",
-    logo: "vikpe.png",
     slogan: "Get info from QuakeWorld servers.",
     url: "https://github.com/vikpe/serverstat",
     tags: ["xantom"],

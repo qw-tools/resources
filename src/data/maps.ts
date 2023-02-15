@@ -7,7 +7,7 @@ export const tools: Item[] = [
     description: "Cross-Platform Level Editor",
     url: "https://trenchbroom.github.io/",
     related: ["https://github.com/TrenchBroom/TrenchBroom"],
-    category: categories.tools,
-    tags: ["maps", "editors"],
+    category: categories.maps,
+    tags: ["editor"],
   },
 ];

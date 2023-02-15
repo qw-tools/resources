@@ -3,18 +3,18 @@ import { categories } from "./categories.js";
 
 function toItem(value: [string, string]): Item {
   const urls = value[1].split(" ");
-  const hasYoutube = urls.length > 1;
+  const hasRelatedLinks = urls.length > 1;
 
   return {
     title: value[0],
     url: `https://www.twitch.tv/${urls[0]}`,
-    related: hasYoutube ? [urls[1]] : [],
-    category: categories.streams,
-    tags: hasYoutube ? ["twitch", "youtube"] : ["twitch"],
+    related: hasRelatedLinks ? urls.slice(1) : [],
+    category: categories.streamsAndVideos,
+    tags: ["twitch"],
   };
 }
 
-export const streams: Item[] = Object.entries({
+export const streamsAndVideos: Item[] = Object.entries({
   QuakeWorld: "quakeworld",
   ake_vader: "ake_vader",
   suddendeathTV: "suddendeathTV https://www.youtube.com/@TVsuddendeath",
@@ -31,8 +31,9 @@ export const streams: Item[] = Object.entries({
   HangTime: "hangtime_of_qw",
   hemostick: "hemostick",
   hiipe: "hiipe_qw",
-  hmr: "qwhammer",
+  hmr: "qwhammer https://www.youtube.com/@qwhammer",
   klice: "kliceo",
+  link: "qw_link",
   LocKtar: "locktar",
   lordlame: "lordlame",
   Milton: "miltonizer https://www.youtube.com/@Miltonizer",

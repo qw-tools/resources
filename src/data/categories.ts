@@ -1,9 +1,10 @@
 export const categories = {
-  clients: { title: "Clients" },
+  clientsAndServers: { title: "Clients / Servers" },
+  events: { title: "Events" },
   community: { title: "Community" },
-  graphics: { title: "Graphics" },
+  gameMedia: { title: "Game Media" },
   mods: { title: "Mods" },
-  servers: { title: "Servers" },
-  streams: { title: "Streams" },
-  tools: { title: "tools" },
+  serverInfo: { title: "Server information" },
+  softwareAndTools: { title: "Software / Tools" },
+  streamsAndVideos: { title: "Streams / Videos" },
 };

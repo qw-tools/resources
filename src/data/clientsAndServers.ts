@@ -8,7 +8,7 @@ function toItem(client: Partial<Item>): Item {
     description: "",
     url: "",
     related: [],
-    category: categories.clients,
+    category: categories.clientsAndServers,
     tags: [],
   };
 
@@ -18,17 +18,18 @@ function toItem(client: Partial<Item>): Item {
   };
 }
 
-export const clients: Item[] = [
+export const clientsAndServers: Item[] = [
   {
     title: "ezQuake",
     logo: "ezquake.png",
-    slogan: "Modern QuakeWorld Client",
+    slogan: "QuakeWorld client with competitive features and customizable graphics.",
     url: "https://ezquake.com/",
     related: ["https://github.com/QW-Group/ezquake-source"],
   },
   {
     title: "FTE",
     logo: "fte.png",
+    slogan: "Cross-platform multipurpose engine for Quake 1/2/3 and Hexen 2.",
     url: "https://www.fteqw.org/",
     related: ["https://github.com/fte-team/fteqw"],
   },

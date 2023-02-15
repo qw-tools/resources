@@ -17,7 +17,7 @@ const websites: Partial<Item>[] = [
   {
     title: "QuakeWorld.nu",
     logo: "quakeworldnu.gif",
-    slogan: "News and forums.",
+    slogan: "Community portal with news and forums.",
     url: "https://www.quakeworld.nu/",
   },
   {
@@ -25,12 +25,6 @@ const websites: Partial<Item>[] = [
     logo: "qwwiki.png",
     slogan: "The QuakeWorld encyclopedia.",
     url: "https://www.quakeworld.nu/wiki/",
-  },
-  {
-    title: "QuakeWorld GFX",
-    logo: "qwgfx.jpg",
-    slogan: "Download graphics, custom maps and other replacement media for QuakeWorld.",
-    url: "https://gfx.quakeworld.nu/",
   },
   {
     title: "QuakeWorld Hub",
