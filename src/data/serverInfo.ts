@@ -20,14 +20,14 @@ export const serverInfo: Item[] = [
   {
     title: "QuakeWorld Server Overview",
     slogan: "Server info, geo location and statistics.",
-    url: "https://vikpe.org/qw-server-overview/",
-    related: ["https://github.com/vikpe/qw-server-overview"],
+    url: "https://tools.quake.world/servers/",
+    related: ["https://github.com/qw-tools/servers"],
     tags: ["xantom"],
   },
   {
     title: "QuakeServers.net",
-    slogan: "Listing active servers for Quake games series.",
-    url: "https://www.quakeservers.net/",
+    slogan: "Listing servers for Quake games series.",
+    url: "https://www.quakeservers.net/quakeworld/servers/",
   },
   {
     title: "masterstat",

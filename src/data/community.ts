@@ -33,6 +33,11 @@ const websites: Partial<Item>[] = [
     url: "https://hub.quakeworld.nu/",
     related: ["https://github.com/quakeworldnu/hub.quakeworld.nu"],
   },
+  {
+    title: "QuakeWorld Open Collective",
+    slogan: "Supporting critical parts of the QuakeWorld community.",
+    url: "https://opencollective.com/quakeworld",
+  },
 ].map((w) => ({
   ...w,
   category: categories.community,

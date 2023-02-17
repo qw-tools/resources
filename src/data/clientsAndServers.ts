@@ -46,4 +46,26 @@ export const clientsAndServers: Item[] = [
     url: "https://nquake.com/",
     related: ["https://github.com/nQuake"],
   },
+  {
+    title: "MVDSV",
+    logo: "mvdsv.png",
+    slogan: "a QuakeWorld Server",
+    url: "https://github.com/QW-Group/mvdsv"
+  },
+  {
+    title: "KTX",
+    logo: "ktx.png",
+    slogan: "Server modification adding numerous features.",
+    url: "https://github.com/QW-Group/ktx"
+  },
+  {
+    title: "QTV",
+    slogan: "Match broadcasting tool.",
+    url: "https://github.com/QW-Group/qtv"
+  },
+  {
+    title: "QWFWD",
+    slogan: "Server proxy.",
+    url: "https://github.com/QW-Group/qwfwd"
+  }
 ].map(toItem);
