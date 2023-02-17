@@ -31,7 +31,7 @@ watch(query, onQueryChange, { immediate: true });
   <div class="pt-1 pb-4 sm:flex sm:space-x-4 sm:items-center">
     <h1 class="font-bold text-lg my-3 w-64">QuakeWorld Resources</h1>
     <div class="grow">
-      <input type="search" class="p-2 bg-white/10 rounded-md w-full" placeholder="filter" v-model="query" />
+      <input type="search" class="px-3 py-2 bg-gray-50 rounded-md w-full border shadow" placeholder="filter" v-model="query" autofocus />
     </div>
   </div>
 

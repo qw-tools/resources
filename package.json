@@ -1,24 +1,24 @@
 {
-  "name": "quakeworld-resources",
-  "type": "module",
+  "name": "qw-resources",
+  "license": "MIT",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "format": "npx prettier --write \"src/**/*.ts\"",
-    "astro": "astro"
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.16.0",
-    "@astrojs/tailwind": "^3.0.1",
-    "@astrojs/vue": "^2.0.1",
-    "astro": "^2.0.11",
-    "tailwindcss": "^3.2.6",
-    "vue": "^3.2.47"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
+    "@types/node": "^18.13.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vue-tsc": "^1.0.24"
   }
 }

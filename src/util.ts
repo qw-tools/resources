@@ -24,6 +24,7 @@ export function getIconNameByUrl(url: string): string {
     "youtube.com": "youtube",
     "discord": "discord",
     "sourceforge.net": "sourceforge",
+    "opencollective.com": "opencollective",
   };
 
   for (const [sUrl, sName] of Object.entries(services)) {
