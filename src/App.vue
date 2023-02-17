@@ -6,8 +6,6 @@ import SiteFooter from "@/Site/SiteFooter.vue";
 
 <template>
   <SiteHeader current-app="resources" />
-  <div class="container">
-    <Resources />
-  </div>
+  <Resources />
   <SiteFooter />
 </template>
