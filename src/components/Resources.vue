@@ -4,17 +4,16 @@ import { items } from "@/data/items";
 import { toItemCollections } from "@/util";
 import ItemLink from "@/components/ItemLink.vue";
 import { ref, watch } from "vue";
-import type { Item, ItemCollection } from "@/types";
+import { ItemCollection } from "@/types";
 
 let query = ref('');
-let collections: ref<ItemCollection[]> = ref([]);
-
-function itemToKeywordString(item: Item): string {
-  return (item.tags ?? []).concat([item.title, item.category.title]).join(" ").toLowerCase();
-}
+let collections: ItemCollection[] = [];
 
 function onQueryChange(query: string): void {
-  const filteredItems = items.filter(i => itemToKeywordString(i).includes(query.toLowerCase()));
+  const filteredItems = items.filter(i => {
+    console.log("item", typeof i, i.hasOwnProperty("toKeyword"));
+    return true;
+  });
   collections = toItemCollections(filteredItems);
 }
 

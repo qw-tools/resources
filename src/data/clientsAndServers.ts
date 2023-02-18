@@ -1,20 +1,11 @@
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
 import { categories } from "./categories.js";
 
-function toItem(client: Partial<Item>): Item {
-  const defaultItem: Item = {
-    title: "",
-    slogan: "",
-    description: "",
-    url: "",
-    related: [],
-    category: categories.clientsAndServers,
-    tags: [],
-  };
-
+function toItem(item: Partial<Item>): Item {
   return {
-    ...defaultItem,
-    ...client,
+    ...DefaultItem,
+    ...item,
+    category: categories.clientsAndServers,
   };
 }
 

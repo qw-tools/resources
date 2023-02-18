@@ -1,5 +1,13 @@
 import { categories } from "./categories.js";
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
+
+function toItem(item: Partial<Item>): Item {
+  return {
+    ...DefaultItem,
+    ...item,
+    category: categories.events,
+  };
+}
 
 export const events: Item[] = [
   {
@@ -9,7 +17,4 @@ export const events: Item[] = [
     url: "https://www.qhlan.org/",
     related: ["https://www.quakeworld.nu/wiki/QHLAN"]
   },
-].map((w) => ({
-  ...w,
-  category: categories.events,
-}));
+].map(toItem);

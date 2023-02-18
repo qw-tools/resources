@@ -1,5 +1,13 @@
 import { categories } from "./categories.js";
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
+
+function toItem(item: Partial<Item>): Item {
+  return {
+    ...DefaultItem,
+    ...item,
+    category: categories.gameMedia,
+  };
+}
 
 export const gameMedia: Item[] = [
   {
@@ -38,7 +46,4 @@ export const gameMedia: Item[] = [
     related: ["https://github.com/TrenchBroom/TrenchBroom"],
     tags: ["map", "editor", "tool"],
   },
-].map((w) => ({
-  ...w,
-  category: categories.gameMedia,
-}));
+].map(toItem);

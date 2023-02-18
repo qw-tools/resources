@@ -1,10 +1,13 @@
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
 import { categories } from "./categories";
 
-const toItem = (w) => ({
-  ...w,
-  category: categories.serverInfo,
-});
+function toItem(item: Partial<Item>): Item {
+  return {
+    ...DefaultItem,
+    ...item,
+    category: categories.serverInfo,
+  };
+}
 
 export const serverInfo: Item[] = [
   {

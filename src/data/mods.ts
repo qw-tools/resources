@@ -1,7 +1,13 @@
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
 import { categories } from "./categories.js";
 
-const toItem = (mod) => ({ ...mod, category: categories.mods });
+function toItem(mod: Partial<Item>): Item {
+  return {
+    ...DefaultItem,
+    ...mod,
+    category: categories.mods,
+  };
+}
 
 export const mods: Item[] = [
   {

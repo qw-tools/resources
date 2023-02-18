@@ -18,7 +18,7 @@ const imgSize = 24;
   <div>
     <div class="flex items-center ">
       <a :href="url" class="p-3 hover:bg-sky-100 grow transition-colors">
-        <img :src="imgUrl" :width="imgSize" class="inline m-0 mr-2" :alt={title} />
+        <img :src="imgUrl" :width="imgSize" class="inline m-0 mr-2" :alt="title" />
         <span class="font-bold">{{ title }}</span>
         <div v-if="slogan" class="text-gray-700 text-sm mt-1">{{ slogan }}</div>
       </a>

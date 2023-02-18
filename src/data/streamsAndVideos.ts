@@ -1,4 +1,4 @@
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
 import { categories } from "./categories.js";
 
 function toItem(value: [string, string]): Item {
@@ -6,11 +6,14 @@ function toItem(value: [string, string]): Item {
   const hasRelatedLinks = urls.length > 1;
 
   return {
-    title: value[0],
-    url: `https://www.twitch.tv/${urls[0]}`,
-    related: hasRelatedLinks ? urls.slice(1) : [],
-    category: categories.streamsAndVideos,
-    tags: ["twitch"],
+    ...DefaultItem,
+    ...{
+      title: value[0],
+      url: `https://www.twitch.tv/${urls[0]}`,
+      related: hasRelatedLinks ? urls.slice(1) : [],
+      category: categories.streamsAndVideos,
+      tags: ["twitch"],
+    }
   };
 }
 

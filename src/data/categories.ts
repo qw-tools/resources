@@ -4,6 +4,7 @@ export const categories = {
   community: { title: "Community" },
   gameMedia: { title: "Game Media" },
   mods: { title: "Mods" },
+  misc: { title: "Misc" },
   serverInfo: { title: "Server information" },
   softwareAndTools: { title: "Software / Tools" },
   streamsAndVideos: { title: "Streams / Videos" },

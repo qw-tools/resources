@@ -1,19 +1,20 @@
 import { categories } from "./categories.js";
-import type { Item } from "@/types";
+import { DefaultItem, Item } from "@/types";
 
-export const discords = [
+function toItem(item: Partial<Item>): Item {
+  return {
+    ...DefaultItem,
+    ...item,
+    category: categories.community,
+  };
+}
+
+export const community: Item[] = [
   {
     title: "Quake.World Discord",
     slogan: "Main QuakeWorld Discord server.",
     url: "https://discord.quake.world/",
   },
-].map((d) => ({
-  ...d,
-  category: categories.community,
-  tags: ["discord"],
-}));
-
-const websites: Partial<Item>[] = [
   {
     title: "QuakeWorld.nu",
     logo: "quakeworldnu.gif",
@@ -38,8 +39,5 @@ const websites: Partial<Item>[] = [
     slogan: "Supporting critical parts of the QuakeWorld community.",
     url: "https://opencollective.com/quakeworld",
   },
-].map((w) => ({
-  ...w,
-  category: categories.community,
-}));
-export const community = [].concat(discords).concat(websites);
+].map(toItem);
+
