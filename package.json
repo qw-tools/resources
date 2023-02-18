@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "eslint-config-prettier": "^8.6.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
