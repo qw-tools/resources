@@ -13,7 +13,7 @@ function toItem(value: [string, string]): Item {
       related: hasRelatedLinks ? urls.slice(1) : [],
       category: categories.streamsAndVideos,
       tags: ["twitch"],
-    }
+    },
   };
 }
 

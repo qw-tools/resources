@@ -40,4 +40,3 @@ export const community: Item[] = [
     url: "https://opencollective.com/quakeworld",
   },
 ].map(toItem);
-

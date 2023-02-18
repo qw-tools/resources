@@ -13,7 +13,8 @@ export const gameMedia: Item[] = [
   {
     title: "QuakeWorld GFX",
     logo: "qwgfx.jpg",
-    slogan: "Download graphics, custom maps and other replacement media for QuakeWorld.",
+    slogan:
+      "Download graphics, custom maps and other replacement media for QuakeWorld.",
     url: "https://gfx.quakeworld.nu/",
     tags: ["graphic"],
   },
@@ -25,18 +26,18 @@ export const gameMedia: Item[] = [
     title: "HUD Numbers Editor",
     url: "https://tools.quake.world/hud-numbers/",
     related: ["https://github.com/qw-tools/hud-numbers"],
-    tags: ["xantom", "editor", "tool", "graphic"]
+    tags: ["xantom", "editor", "tool", "graphic"],
   },
   {
     title: "Model Texture Editor",
     url: "https://tools.quake.world/model-textures/",
     related: ["https://github.com/qw-tools/model-textures"],
-    tags: ["xantom", "editor", "tool", "graphic"]
+    tags: ["xantom", "editor", "tool", "graphic"],
   },
   {
     title: "Mapshots",
     url: "https://github.com/vikpe/qw-mapshots",
-    slogan: "Screenshots of QuakeWorld maps."
+    slogan: "Screenshots of QuakeWorld maps.",
   },
   {
     title: "TrenchBroom",

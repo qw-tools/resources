@@ -22,7 +22,7 @@ export function getIconNameByUrl(url: string): string {
     "github.com": "github",
     "twitch.tv": "twitch",
     "youtube.com": "youtube",
-    "discord": "discord",
+    discord: "discord",
     "sourceforge.net": "sourceforge",
     "opencollective.com": "opencollective",
   };

@@ -16,4 +16,3 @@ export const items: Item[] = [
   serverInfo,
   streamsAndVideos,
 ].flat(1);
-

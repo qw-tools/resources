@@ -6,13 +6,13 @@ export type Category = {
 
 export interface Item {
   title: string;
-  slogan?: string;
-  description?: string;
-  logo?: string;
+  slogan: string;
+  description: string;
+  logo: string;
   url: string;
-  related?: string[];
+  related: string[];
   category: Category;
-  tags?: string[];
+  tags: string[];
 }
 
 export const DefaultItem: Item = {
@@ -24,10 +24,13 @@ export const DefaultItem: Item = {
   related: [],
   category: categories.misc,
   tags: [],
-}
+};
 
 export function ItemToKeyword(item: Item): string {
-  return (item.tags ?? []).concat([item.title, item.category.title]).join(" ").toLowerCase();
+  return (item.tags ?? [])
+    .concat([item.title, item.category.title])
+    .join(" ")
+    .toLowerCase();
 }
 
 export type ItemCollection = {
