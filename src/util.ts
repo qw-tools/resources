@@ -42,7 +42,7 @@ export function getBaseUrl(): string {
     : import.meta.env.BASE_URL;
 }
 
-export function getPublicUrl(url): string {
+export function getPublicUrl(url: string): string {
   return `${getBaseUrl()}${url}`;
 }
 
