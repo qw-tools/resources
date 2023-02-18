@@ -1,18 +1,30 @@
-# Vue 3 + TypeScript + Vite
+# QuakeWorld Resources [![Deploy](https://github.com/qw-tools/resources/actions/workflows/deploy.yml/badge.svg)](https://github.com/qw-tools/resources/actions/workflows/deploy.yml)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+:link: **https://tools.quake.world/resources/**
 
-## Recommended IDE Setup
+## Development
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Setup
 
-## Type Support For `.vue` Imports in TS
+```shell
+# clone repo
+git clone git@github.com:qw-tools/resources.git
+cd resources
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+# install dependencies
+yarn install
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+# start dev server
+yarn dev
+```
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+dev server is hosted at http://localhost:5173
+
+### Commands
+
+| Command      | Description                                       |
+|--------------|---------------------------------------------------|
+| `yarn dev`   | Start development server at http://localhost:5173 |
+| `yarn build` | Build site to `/dist`                             |
+| `yarn serve` | Serve `/dist` at http://localhost:4173            |
+| `yarn lint`  | Run linter                                        |
