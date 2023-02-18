@@ -36,12 +36,22 @@ export function getIconNameByUrl(url: string): string {
   return "website";
 }
 
+export function getBaseUrl(): string {
+  return import.meta.env.DEV
+    ? "http://localhost:5173/"
+    : import.meta.env.BASE_URL;
+}
+
+export function getPublicUrl(url): string {
+  return `${getBaseUrl()}${url}`;
+}
+
 export function getIconUrlByUrl(url: string): string {
-  return `/assets/img/icons/${getIconNameByUrl(url)}.svg`;
+  return getPublicUrl(`/assets/img/icons/${getIconNameByUrl(url)}.svg`);
 }
 
 export function getLogoUrl(filename: string): string {
-  return `/assets/img/logotypes/${filename}`;
+  return getPublicUrl(`/assets/img/logotypes/${filename}`);
 }
 
 function toSortString(item: Item): string {
