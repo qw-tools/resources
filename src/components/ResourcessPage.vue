@@ -8,6 +8,10 @@ import ItemLink from "@/components/ItemLink.vue";
 let query = ref("");
 let collections: ItemCollection[] = [];
 
+function onQueryInputChange(event: Event) {
+  query.value = (event.target as HTMLInputElement).value;
+}
+
 function onQueryChange(query: string): void {
   const lcQuery = query.toLowerCase();
   const filteredItems = items.filter((i) => ItemToKeyword(i).includes(lcQuery));
@@ -30,7 +34,8 @@ watch(query, onQueryChange, { immediate: true });
           type="search"
           class="p-2 bg-gray-100 w-full rounded-md shadow border border-gray-300 text-sm focus:bg-sky-50 focus:border-sky-600 focus:outline-0"
           placeholder="filter"
-          v-model="query"
+          :value="query"
+          @input="onQueryInputChange"
           autofocus
         />
       </div>
