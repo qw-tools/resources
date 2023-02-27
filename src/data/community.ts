@@ -11,11 +11,6 @@ function toItem(item: Partial<Item>): Item {
 
 export const community: Item[] = [
   {
-    title: "Quake.World Discord",
-    slogan: "Main QuakeWorld Discord server.",
-    url: "https://discord.quake.world/",
-  },
-  {
     title: "QuakeWorld.nu",
     logo: "quakeworldnu.gif",
     slogan: "Community portal with news and forums.",

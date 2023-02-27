@@ -7,6 +7,7 @@ export const categories = {
   mods: { title: "Mods" },
   misc: { title: "Misc" },
   serverInfo: { title: "Server information" },
+  social: { title: "Social" },
   softwareAndTools: { title: "Software / Tools" },
   streamsAndVideos: { title: "Streams / Videos" },
 };
