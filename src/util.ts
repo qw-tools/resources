@@ -19,6 +19,7 @@ export function getIconNameByUrl(url: string): string {
   }
 
   const services = {
+    wiki: "wiki",
     "github.com": "github",
     "twitch.tv": "twitch",
     "youtube.com": "youtube",
