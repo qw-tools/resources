@@ -24,12 +24,14 @@ export const gameMedia: Item[] = [
   },
   {
     title: "HUD Numbers Editor",
+    logo: "qwgfx.jpg",
     url: "https://tools.quake.world/hud-numbers/",
     related: ["https://github.com/qw-tools/hud-numbers"],
     tags: ["xantom", "editor", "tool", "graphics"],
   },
   {
     title: "Model Texture Editor",
+    logo: "qwgfx.jpg",
     url: "https://tools.quake.world/model-textures/",
     related: ["https://github.com/qw-tools/model-textures"],
     tags: ["xantom", "editor", "tool", "graphics"],
@@ -41,6 +43,7 @@ export const gameMedia: Item[] = [
   },
   {
     title: "Simple Items Texture Editor",
+    logo: "qwgfx.jpg",
     url: "https://tools.quake.world/simple-items/",
     related: ["https://github.com/qw-tools/simple-items"],
     tags: ["xantom", "editor", "tool", "graphics"],
