@@ -40,6 +40,12 @@ export const gameMedia: Item[] = [
     slogan: "Screenshots of QuakeWorld maps.",
   },
   {
+    title: "Simple Items Texture Editor",
+    url: "https://tools.quake.world/simple-items/",
+    related: ["https://github.com/qw-tools/simple-items"],
+    tags: ["xantom", "editor", "tool", "graphics"],
+  },
+  {
     title: "TrenchBroom",
     logo: "trenchbroom.png",
     slogan: "Cross-Platform Map Editor",
