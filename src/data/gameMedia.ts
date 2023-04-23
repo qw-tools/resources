@@ -16,7 +16,7 @@ export const gameMedia: Item[] = [
     slogan:
       "Download graphics, custom maps and other replacement media for QuakeWorld.",
     url: "https://gfx.quakeworld.nu/",
-    tags: ["graphic"],
+    tags: ["graphics"],
   },
   {
     title: "QuakeWorld Map Archive",
@@ -26,13 +26,13 @@ export const gameMedia: Item[] = [
     title: "HUD Numbers Editor",
     url: "https://tools.quake.world/hud-numbers/",
     related: ["https://github.com/qw-tools/hud-numbers"],
-    tags: ["xantom", "editor", "tool", "graphic"],
+    tags: ["xantom", "editor", "tool", "graphics"],
   },
   {
     title: "Model Texture Editor",
     url: "https://tools.quake.world/model-textures/",
     related: ["https://github.com/qw-tools/model-textures"],
-    tags: ["xantom", "editor", "tool", "graphic"],
+    tags: ["xantom", "editor", "tool", "graphics"],
   },
   {
     title: "Mapshots",
